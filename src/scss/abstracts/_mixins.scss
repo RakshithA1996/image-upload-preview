@@ -1,0 +1,223 @@
+//the mixins for work improvement
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+-medium-screen
+-desktop
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==port-phone {
+        @media only screen and (max-width: 20em) {
+            @content
+        }
+
+
+    }
+
+    @if $breakpoint==land-phone {
+        @media only screen and (max-width: 30em) {
+            @content
+        }
+
+
+    }
+
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 37.5em) {
+            @content
+        }
+
+
+    }
+
+    @if $breakpoint==ipad {
+        @media only screen and (max-width: 48em) {
+            @content
+        }
+
+
+    }
+
+    @if $breakpoint==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+
+
+    }
+
+    @if $breakpoint==medium-screen {
+        @media only screen and (max-width: 64em) {
+            @content
+        }
+
+
+    }
+
+    @if $breakpoint==large-screen {
+        @media only screen and (max-width: 64em) {
+            @content
+        }
+
+
+    }
+
+
+    @if $breakpoint==tab-land {
+        @media only screen and (max-width: 80em) {
+            @content
+        }
+
+    }
+
+    @if $breakpoint==desktop {
+        @media only screen and (max-width: 90em) {
+            @content
+        }
+
+
+    }
+
+    @if $breakpoint==big-desktop {
+        @media only screen and (min-width: 112.5em) {
+            @content
+        }
+
+
+    }
+}
+
+@mixin flexRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+}
+
+@mixin flexColumn {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+
+@mixin flexCenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flexStart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flexEnd {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+@mixin gridCenter {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+@mixin gridStart {
+    display: -ms-grid;
+    display: grid;
+    justify-items: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center
+}
+
+@mixin gridEnd {
+    display: -ms-grid;
+    display: grid;
+    justify-items: end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center
+}
+
+@mixin btn {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+}

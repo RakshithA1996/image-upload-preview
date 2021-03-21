@@ -1,0 +1,64 @@
+body {
+  font-family: "Circular Std", sans-serif;
+  font-weight: 400;
+  //     font-style: book !important;
+  /*font-size: 16px;*/
+  //line-height: 1.7;
+  // color: $color-grey-dark;
+}
+
+.heading--mega {
+  font-size: $font-size-heading-mega;
+  font-weight: $font-weight-bold;
+  line-height: 6.3rem;
+
+  @include respond(medium-screen) {
+    font-size: 4rem;
+    font-weight: $font-weight-bold;
+    line-height: 4rem;
+  }
+
+  @include respond(ipad) {
+  }
+
+  @include respond(phone) {
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    line-height: 4rem;
+  }
+}
+
+.heading--medium {
+  font-size: $font-size-heading-small;
+  font-weight: $font-weight-bold;
+  line-height: 4.8rem;
+
+  @include respond(ipad) {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+.p--medium {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-medium;
+  line-height: 3.6rem;
+
+  @include respond(phone) {
+    font-size: 2.25rem;
+    font-weight: 450;
+  }
+}
+
+.p--small {
+  font-size: $font-size-root;
+  font-weight: $font-weight-medium;
+  line-height: 2.4rem;
+}
+
+.green--text {
+  color: $color-primary-green;
+  &--2 {
+    color: #009ae0;
+  }
+}
