@@ -4,8 +4,8 @@ INSTRUCTION :
 
 Flow of execution :
 
-step 1 : Clone this project from git\*
+step 1 : Clone this project from git.
 
-step 2 : Go to the project directory open terminal and run "npm i".\*
+step 2 : Go to the project directory open terminal and run "npm i".
 
-step 3 : When all the packages have been install then open terminal and run "npm start".\*
+step 3 : When all the packages have been install then open terminal and run "npm start".
